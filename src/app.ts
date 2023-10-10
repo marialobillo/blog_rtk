@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(helmet())
 
 // Routes
-app.use(router)
+app.use('/api/v1', router)
 
 
 const start = async () => {
