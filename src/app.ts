@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 import connectDB from './config/connectionDB'
+import { router } from './routes'
 
 
 const PORT = process.env.PORT || 3040   
@@ -13,6 +14,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(helmet())
+
+// Routes
+app.use(router)
 
 
 const start = async () => {
