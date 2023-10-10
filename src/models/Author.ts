@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import { IAuthor } from "../interfaces/author.interface";
 
-const AuthorSchema: Schema = new Schema(
+const AuthorSchema: Schema = new Schema<IAuthor>(
     {
         fullName: { type: String, required: true },
         email: { type: String, required: true, unique: true },
