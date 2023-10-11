@@ -20,7 +20,7 @@ app.use('/api/v1', router)
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
-}
+})
 
 
 const start = async () => {
